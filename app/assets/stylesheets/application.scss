@@ -33,3 +33,47 @@ body{
     bottom: 0;
 }
 
+/* Looping Fade In Fade out */
+@-o-keyframes fadeinout {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    33% { opacity: 0.5; }
+    40% { opacity: 0.3; }
+    47% { opacity: 0.1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes fadeinout {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    33% { opacity: 0.5; }
+    40% { opacity: 0.3; }
+    47% { opacity: 0.1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fadeinout {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    33% { opacity: 0.5; }
+    40% { opacity: 0.3; }
+    47% { opacity: 0.1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fadeinout {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    33% { opacity: 0.5; }
+    40% { opacity: 0.3; }
+    47% { opacity: 0.1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.animate-fadeinout {
+    -webkit-animation: fadeinout 3s ease-in-out;
+    -moz-animation: fadeinout 3s ease-in-out;
+    -o-animation: fadeinout 3s ease-in-out;
+    animation: fadeinout 3s ease-in-out;
+}
+

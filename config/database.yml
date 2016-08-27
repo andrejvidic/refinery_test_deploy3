@@ -22,4 +22,12 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: parici_production
+  template: template0
+  host: localhost
+  username: parici
+  password: <%= ENV['PARICI_DATABASE_PASSWORD']%>
+

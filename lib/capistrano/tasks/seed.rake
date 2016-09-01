@@ -1,4 +1,4 @@
-namespace : deploy do
+namespace :deploy do
   desc "Run rake db:seed"
   task :seed do
     on primary(:app) do

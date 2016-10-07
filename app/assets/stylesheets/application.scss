@@ -2,10 +2,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 body{
     background: black;
 }
 
+/* --------------------- VARIABLES ------------------------*/
+
+$main-col: gray;
+$text-col:#555;
+
+@mixin  bg-box {
+    position: relative;
+    z-index: 1;
+    height:130px;
+    &:hover {}  
+}
+
+/* HOME PAGE COMING SOON */
 .cover_center {
     width: 500px;
     height: 500px;
@@ -119,3 +133,108 @@ body{
     animation: flickerAnimation 3s ease-in-out;
 }
 
+        .navbar-default {
+            background-color: transparent;
+            border-color: transparent;
+            position:absolute;
+            background-color: black;
+            padding:30px 0 25px 0;
+            width:100%;
+             
+            // .blue-header {
+            //     background-color:#333;
+            //     padding:35px 0;
+            //     position:relative;
+            // }
+
+            // .grey-header {
+            //     background-color:#333;
+            //     padding:30px 0;
+            //     position:relative;
+            // }
+
+             
+            .logo {
+                padding-left:85px;
+                width: 200px;
+                height: auto;
+            }
+     
+            .nav-menu {
+                padding-right:85px;
+                        
+                .enquiry {
+                    color:#fff;
+                    display:block;
+                    font-family:playfair display;
+                    font-size:1.4em;
+                    font-style:italic;
+                    padding-right:10px;
+
+                    a {
+                        font-family:Open Sans;
+                        color:#fff;
+                        font-style:normal;
+                        font-weight:bold;
+                        padding-left:10px;
+                    }
+                }
+                
+                .navbar-right {
+                    margin-right: 0px;
+                    clear:right;
+                }
+                
+                .navbar-nav {
+
+                    li {
+                        a{font-family:open sans;
+                          color:#fff;
+                          font-size:0.9em;
+                          padding:5px 0px;
+                          margin:0 10px;
+                          letter-spacing:0.5px;                                
+                          
+
+                          &:hover { }
+                         }
+                    }
+                    
+                    .active {
+                        
+                        a {
+                            background:transparent;
+                            
+                        }
+                    }
+                }
+            }
+        }  
+
+//HOVER EFFECT
+
+.navbar-default .navbar-nav > li > a {
+    text-align:center;
+    border-bottom: 3px solid transparent;
+    -o-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    outline: none;
+    z-index: 10;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom:3px solid $main-col;
+    background-color:transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color:transparent;
+    border-bottom:3px solid $main-col;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border:none;
+}

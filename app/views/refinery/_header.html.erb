@@ -1,8 +1,12 @@
-<div id="home-header">
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container-fluid">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container-fluid">
+    <div class="logo-nav">
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <button class="navbar-toggle"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -10,11 +14,10 @@
         </button>
         <a href="/"><%= image_tag(("parici.jpg"), :class => "logo")%></a>
       </div>
-      <!-- Collect the nav links, forms and other content for toggling -->
-      <div class="collapse navbar-collapse nav-menu" id="navbar-collapse-1">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse nav-menu" id="navbar-collapse">
         <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
       </div>
     </div>
-  </nav>
-</div>
-
+  </div>
+</nav>
